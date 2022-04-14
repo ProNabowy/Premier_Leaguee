@@ -1,0 +1,175 @@
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.button {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text h1 {
+    color: white;
+    margin-bottom: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.text h1:first-child {
+    font-size: 50px;
+    color: transparent;
+    background-image: linear-gradient(to right,
+    yellow, violet, indigo, blue, green, orange, red );
+    -webkit-background-clip: text;
+    background-size: 400%;
+    animation: left-animation 4s linear infinite;
+}
+@keyframes left-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+.text h1:last-child {
+    margin-bottom: 70px;
+}
+.button a {
+    margin-left: 50px;
+    padding: 30px 70px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #03e9f4;
+    text-transform: uppercase;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.button a:first-child {
+    color: #45e924;
+}
+.button a:nth-child(3) {
+    color: #d26ed2;
+}
+a:first-child:hover {
+    background-color: #45e924;
+    color: #050801;
+    box-shadow: 0 0 5px #45e924,
+                0 0 25px #45e924,
+                0 0 50px #45e924,
+                0 0 200px #45e924;
+}
+a:nth-child(2):hover {
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+.button a:nth-child(3):hover {
+    background-color: #d26ed2;
+    color: #050801;
+    box-shadow: 0 0 5px #d26ed2,
+                0 0 25px #d26ed2,
+                0 0 50px #d26ed2,
+                0 0 200px #d26ed2;
+}
+a span {
+    display: block;
+    position: absolute;
+}
+a span:first-child {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: -100%;
+    animation: top-hover  1s linear  infinite;
+}
+a span:nth-child(2) {
+    width: 2px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+    animation: left-hover  1s linear  infinite;
+
+}
+a span:nth-child(3) {
+    width: 100%;
+    height: 2px;
+    bottom:0%;
+    right: -100%;
+    animation: bottom-hover  1s linear  infinite;
+}
+a span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    right: 0;
+    top: -100%;
+    animation: right-hover  1s linear  infinite;
+}
+a:first-child span {
+    background-color: #45e924;
+}
+.button a:nth-child(2) span {
+    background-color: #03e9f4;
+}
+a:nth-child(3) span {
+background-color: #d26ed2;
+}
+@keyframes top-hover {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes left-hover {
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+@keyframes bottom-hover {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right:  100%;
+    }
+}
+@keyframes right-hover {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+@media (max-width:991px) {
+    .button {
+        flex-direction: column;
+    }
+    .button a {
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+    h1 {
+        text-align: center;
+    }
+}
