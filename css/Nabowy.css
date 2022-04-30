@@ -8,20 +8,6 @@ body {
     overflow: hidden;
     font-family: sans-serif;
 }
-.imges {
-    display: flex;
-}
-.imges img {
-    margin: 20px ;
-}
-img {
-    width: 250px;
-}
-@media(max-width:991px) {
-    .imges {
-        display: none;
-    }
-}
 .button {
     font-family: sans-serif;
     display: flex;
@@ -146,6 +132,20 @@ background-color: #d26ed2;
     }
     .text {
         margin-top: 0;
+    }
+}
+.imges {
+    display: flex;
+}
+.imges img {
+    margin: 20px ;
+}
+img {
+    width: 250px;
+}
+@media(max-width:991px) {
+    .imges {
+        display: none;
     }
 }
 @keyframes top-hover {
