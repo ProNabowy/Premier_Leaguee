@@ -8,11 +8,26 @@ body {
     overflow: hidden;
     font-family: sans-serif;
 }
+.imges {
+    display: flex;
+}
+.imges img {
+    margin: 20px ;
+}
+img {
+    width: 250px;
+}
+@media(max-width:991px) {
+    .imges {
+        display: none;
+    }
+}
 .button {
     font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .text {
     margin-top: -100px;
@@ -32,14 +47,7 @@ body {
     background-size: 400%;
     animation: left-animation 4s linear infinite;
 }
-@keyframes left-animation {
-    0% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
-}
+
 .text h1:last-child {
     margin-bottom: 70px;
 }
@@ -51,6 +59,8 @@ body {
     color: #03e9f4;
     text-transform: uppercase;
     transition: 0.5s;
+    margin: 10px ;
+    display: block;
     position: relative;
     overflow: hidden;
 }
@@ -127,6 +137,17 @@ a:first-child span {
 a:nth-child(3) span {
 background-color: #d26ed2;
 }
+@media (max-width:991px) {
+    .button {
+        flex-direction: column;
+    }
+    h1 {
+        text-align: center;
+    }
+    .text {
+        margin-top: 0;
+    }
+}
 @keyframes top-hover {
     0% {
         left: -100%;
@@ -164,18 +185,11 @@ background-color: #d26ed2;
         top: 100%;
     }
 }
-@media (max-width:991px) {
-    .button {
-        flex-direction: column;
+@keyframes left-animation {
+    0% {
+        background-position: left;
     }
-    .button a {
-        margin-bottom: 50px;
-        margin-left: 0;
-    }
-    h1 {
-        text-align: center;
-    }
-    .text {
-        margin-top: 0;
+    100% {
+        background-position: right;
     }
 }
